@@ -7,13 +7,13 @@
 
 // This empty namespace is declared to check if LcevcDil libraries are loaded.
 var libDPIModule = {};
-var LcevcDil = {};
+var LCEVCdec = {};
 
 /**
 * LCEVC DIL constructor
 * @constructor
 */
-LcevcDil.LcevcDIL = class {
+LCEVCdec.LCEVCdec = class {
   /**
    * @param {HTMLVideoElement} media
    * @param {HTMLCanvasElement} canvas
@@ -57,7 +57,7 @@ LcevcDil.LcevcDIL = class {
 /**
  * LCEVC Support Check
  */
-LcevcDil.SupportObject = {
+LCEVCdec.SupportObject = {
 
   /**
    * Check if canvas has WebGL support
@@ -72,10 +72,10 @@ LcevcDil.SupportObject = {
  * LCEVC Support Checklist Result
  * @type {boolean}
  */
-LcevcDil.SupportObject.SupportStatus;
+LCEVCdec.SupportObject.SupportStatus;
 
 /**
  * LCEVC Support CheckList Error if any.
  * @type {string}
  */
-LcevcDil.SupportObject.SupportError;
+LCEVCdec.SupportObject.SupportError;

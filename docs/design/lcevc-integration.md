@@ -27,9 +27,9 @@ To allow the Closure compiler to use the objects and methods that are exported b
 
 ## Integration point
 
-### The shaka.lcevc.Dil class - (DIL : Decoder Integration Layer)
+### The shaka.lcevc.Dec class - (DIL : Decoder Integration Layer)
 
-The main logic of the LCEVC integration is located in the `lib/lcevc_dil.min.js` file. In this file the shaka.lcevc.Dil is exported to be used in the project. This class is in charge of creating the Dil object using the mentioned externs, checking if LCEVC DIL library is available, etc.
+The main logic of the LCEVC integration is located in the `lib/lcevc_dil.min.js` file. In this file the shaka.lcevc.Dec is exported to be used in the project. This class is in charge of creating the Dec object using the mentioned externs, checking if LCEVC DIL library is available, etc.
 
 ### Modifications in the player
 
@@ -38,15 +38,15 @@ If shaka.ui is used the `canvas` is created in line with the video element in th
 
 `shaka.externs.LcevcConfiguration` is added to the `playerConfiguration` that is used as configuration for the LCEVC DIL Library.
 
-The Dil object is created in the `onLoad_()` event that is triggered when a new video is loaded in Shaka Player. Attaching to a media element is defined as:
+The Dec object is created in the `onLoad_()` event that is triggered when a new video is loaded in Shaka Player. Attaching to a media element is defined as:
 
 -   Registering error listeners to the media element.
 -   Catching the video element for use outside of the load graph.
 
-The Dil object is created only if LCEVC is supported (LCEVC libs are loaded on the page) and also when it was not already created in another `onLoad_()` event execution.
+The Dec object is created only if LCEVC is supported (LCEVC libs are loaded on the page) and also when it was not already created in another `onLoad_()` event execution.
 
 
-### Feeding the Dil
+### Feeding the Dec
 
 The logic that Shaka Player uses to communicate with the Media Source Extensions (MSE) is located in the `media/media_source_engine.js` file.
 
