@@ -1,25 +1,25 @@
 /**
-* @fileoverview Externs for LcevcDil
+* @fileoverview Externs for LcevcDec
 * compiler.
 *
 * @externs
 */
 
-// This empty namespace is declared to check if LcevcDil libraries are loaded.
+// This empty namespace is declared to check if LcevcDec libraries are loaded.
 var libDPIModule = {};
 var LCEVCdec = {};
 
 /**
-* LCEVC DIL constructor
+* LCEVC Dec constructor
 * @constructor
 */
 LCEVCdec.LCEVCdec = class {
   /**
    * @param {HTMLVideoElement} media
    * @param {HTMLCanvasElement} canvas
-   * @param {shaka.extern.LcevcConfiguration} dilConfig
+   * @param {shaka.extern.LcevcConfiguration} lcevcConfig
    */
-  constructor(media, canvas, dilConfig) {
+  constructor(media, canvas, lcevcConfig) {
   }
 
   /**
@@ -36,7 +36,7 @@ LCEVCdec.LCEVCdec = class {
   /**
    * Set current variant as variantId to the LCEVC decoder
    * @param {!number} variantId
-   * @param {!boolean} autoBufferSwitch is lcevcDil mode that switches variant
+   * @param {!boolean} autoBufferSwitch is lcevcDec mode that switches variant
    * when the downloaded buffer from last variant has finished playing and
    * buffers from the new variant starts to play.
    */
@@ -49,7 +49,7 @@ LCEVCdec.LCEVCdec = class {
   setContainerFormat(containerFormat) {}
 
   /**
-   * Close LCEVC DIL
+   * Close LCEVC DEC
    */
   close() {}
 };
